@@ -7,6 +7,7 @@ const initialState = {
 
 const counterReducer = (state = initialState, action) => {
   if (action.type === "INCREMENT") {
+    // non è mai lo stato iniziale a cambiare, quello è sempre immutabile, ogni volta che vogliamo cambiare qualcosa, creiamo un nuovo oggetto, con i valori aggiornati e lo ritorniamo.
     return { counter: state.counter + 1, showCounter: state.showCounter };
   } else if (action.type === "INCREASE") {
     return { counter: state.counter + action.amount, showCounter: state.showCounter };
